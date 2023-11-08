@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
 
     public int stocked;
     public GameObject crispstockUI;
+    public GameObject drinkstockUI;
 
     public void Update()
     {
         if (stocked == 8)
         {
             crispstockUI.SetActive(false);
+            drinkstockUI.SetActive(false);
         }
     }
 }

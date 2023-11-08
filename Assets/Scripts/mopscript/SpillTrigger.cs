@@ -16,8 +16,7 @@ public class SpillTrigger : MonoBehaviour
             CleanspillUI.SetActive(true);
             spillasset.SetActive(false);
             transform.position = new Vector3(1000, 0, 5);
-            
-
+           
         }
     }
 
