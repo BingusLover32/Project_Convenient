@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
         {
             crispstockUI.SetActive(false);
             drinkstockUI.SetActive(false);
+            stocked = stocked - 8;
         }
     }
 }
