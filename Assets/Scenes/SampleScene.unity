@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8242193, g: 0.5673843, b: 0.2910159, a: 1}
+  m_IndirectSpecularColor: {r: 0.8242193, g: 0.564454, b: 0.2910159, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2838,7 +2838,7 @@ GameObject:
   - component: {fileID: 524992564}
   - component: {fileID: 524992563}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2872,7 +2872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80d594e13f9cb54b97685ed882c352e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 9
   rb: {fileID: 524992563}
 --- !u!136 &524992565
 CapsuleCollider:
@@ -2881,7 +2881,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524992562}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 49a6baffd4df7724696cacd68a1193fb, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
