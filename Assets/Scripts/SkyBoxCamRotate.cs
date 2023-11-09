@@ -14,7 +14,7 @@ public class SkyBoxCamRotate : MonoBehaviour
     void Update()
     {
         float speed = Input.GetAxisRaw(AxisInput.Horizontal) * 5.0f;
-        transform.Rotate(-0.02f, 0, 0);
+        transform.Rotate(0, 0.05f, 0);
        
     }
 }
