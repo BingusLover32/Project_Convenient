@@ -6,6 +6,7 @@ TagManager:
   tags:
   - dirt
   - binend
+  - TopDirt
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - DIrtyTrails
   - 
   - 
   - 
@@ -42,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: DirtTrails
+    uniqueID: 1652847131
     locked: 0
