@@ -6,11 +6,11 @@ public class TillTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Customer")
+        if (other.tag == "Stinky Person")
         {
             Debug.Log("Customer is here");
         }
-        if (other.tag == "Player")
+        if (other.tag == "Stinky Person")
         {
             Debug.Log("Player is here");
         }
@@ -19,12 +19,12 @@ public class TillTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Customer")
+        if (other.tag == "Stinky Person")
         {
             Debug.Log("Customer left");
         }
 
-        if (other.tag == "Player")
+        if (other.tag == "Stinky Person")
         {
             Debug.Log("Player left");
         }
