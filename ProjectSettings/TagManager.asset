@@ -6,6 +6,7 @@ TagManager:
   tags:
   - dirt
   - binend
+  - Customer
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class NavmeshCustomer : MonoBehaviour
     public Transform[] waypoints;
     int waypointIndex;
     Vector3 target;
+    public bool atTill = false;
 
     void Start()
     {
@@ -18,11 +19,15 @@ public class NavmeshCustomer : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, target) < 1.5f)
+        if (Vector3.Distance(transform.position, target) < 1.3f)
 
         {
-            UpdateDestination();
-            IterateWaypointIndex();
+            if (atTill == false)
+            {
+                UpdateDestination();
+                IterateWaypointIndex();
+            }
+            
         }
     }
 
@@ -40,6 +45,7 @@ public class NavmeshCustomer : MonoBehaviour
         if(waypointIndex== waypoints.Length)
         {
             waypointIndex = 0;
+            atTill = true;
         }
     }
 
