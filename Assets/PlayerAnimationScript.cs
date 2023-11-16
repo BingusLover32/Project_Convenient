@@ -50,6 +50,17 @@ public class PlayerAnimationScript : MonoBehaviour
                 animator.Play("PlayerDown");
             };
         }
+        if (Input.GetKeyDown(KeyCode.A))
 
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                animator.Play("PlayerDRight");
+            }
+            else
+            {
+                animator.Play("PlayerRight");
+            };
+        }
     }
 }
