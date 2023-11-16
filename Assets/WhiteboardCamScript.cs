@@ -6,19 +6,18 @@ public class WhiteboardCamScript : MonoBehaviour
 {
     public Transform targetPosition; // The target position for the camera
     public Transform targetLookAt; // The target point the camera should look at
-    public Transform OriginalPosition;
     public Transform OriginalLookAt;
     public float moveSpeed = 5f; // Speed at which the camera moves
     public float rotationSpeed = 3f; // Speed at which the camera rotates
     private bool isAtTarget = false; // Flag to check if the camera is at the target position
 
-    public void ActivateIt();
-    {
-        isAtTarget = !isAtTarget;
-    }
-    
     void Update()
     {
+        // Toggle camera position with the 'Space' key
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isAtTarget = !isAtTarget;
+        }
 
         // Move the camera towards the target position
         if (isAtTarget)
