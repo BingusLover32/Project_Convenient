@@ -10,13 +10,18 @@ public class CrispTrigger : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
-        interactUI.SetActive(true);
-        if (Input.GetKeyDown(KeyCode.E))
+        if (other.tag == "Player")
         {
-            stockcrispUI.SetActive(true);
-            transform.position = new Vector3(1000, 0, 5);
+            interactUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                stockcrispUI.SetActive(true);
+                transform.position = new Vector3(1000, 0, 5);
+
+            }
 
         }
+        
     }
     private void OnTriggerExit(Collider other)
     {
