@@ -7,33 +7,52 @@ public class TillTrigger : MonoBehaviour
 
     SpawnItemsTill spawnItemsTill;
 
+    MoveCamera moveCamera;
+    public int numberofpeople = 2;
+
+    public bool startTill = false;
+
+     
     void Start()
     {
         spawnItemsTill = GameObject.FindGameObjectWithTag("SpawnItemsTill").GetComponent<SpawnItemsTill>();
+        moveCamera= GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MoveCamera>();
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Customer")
         {
-            Debug.Log("Customer is here");
+            numberofpeople++;
         }
         if (other.tag == "Player")
         {
-            spawnItemsTill.ItemSpawn();
+            numberofpeople++;
         }
        
+
     }
 
+    void Update()
+    {
+        if (numberofpeople == 2)
+        {
+            spawnItemsTill.ItemSpawn();
+            numberofpeople = 0;
+            moveCamera.tillactivated = true;
+        }
+       
+
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Customer")
         {
-            Debug.Log("Customer left");
+            moveCamera.tillactivated = false;
         }
 
         if (other.tag == "Player")
         {
-            Debug.Log("Player left");
+            numberofpeople = 0;
         }
     }
 }
