@@ -7,6 +7,9 @@ TagManager:
   - dirt
   - binend
   - Customer
+  - Conveyorbelt
+  - Item
+  - SpawnItemsTill
   layers:
   - Default
   - TransparentFX

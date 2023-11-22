@@ -8,10 +8,13 @@ public class SpawnItemsTill : MonoBehaviour
 
     public int iterationCount = 5;
 
-
-    void Start()
+    public void ItemSpawn()
     {
         StartCoroutine(SpawnItems());
+    }    
+    void Start()
+    {
+        
     }
 
     public IEnumerator SpawnItems()
@@ -20,9 +23,11 @@ public class SpawnItemsTill : MonoBehaviour
         for (int i = 0; i < iterationCount; i++)
         {
             Instantiate(itemPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
 
         
     }
+
+
 }

@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class TillTrigger : MonoBehaviour
 {
+
+    SpawnItemsTill spawnItemsTill;
+
+    void Start()
+    {
+        spawnItemsTill = GameObject.FindGameObjectWithTag("SpawnItemsTill").GetComponent<SpawnItemsTill>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Customer")
@@ -12,7 +19,7 @@ public class TillTrigger : MonoBehaviour
         }
         if (other.tag == "Player")
         {
-            Debug.Log("Player is here");
+            spawnItemsTill.ItemSpawn();
         }
        
     }

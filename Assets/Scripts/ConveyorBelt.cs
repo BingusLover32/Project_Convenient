@@ -5,12 +5,23 @@ using UnityEngine;
 public class ConveyorBelt : MonoBehaviour
 {
     public float speed;
-    public Vector3 direction;
-    public GameObject item;
+    Rigidbody rBody;
+    public bool startbelt = true;
 
-
-    void Update()
+    void Start()
     {
-        item.GetComponent<Rigidbody>().velocity = speed * direction * Time.deltaTime;
+        rBody = GetComponent<Rigidbody>();
     }
+
+    void FixedUpdate()
+    {
+        if (startbelt == true)
+        {
+            Vector3 pos = rBody.position;
+            rBody.position += Vector3.right * speed * Time.fixedDeltaTime;
+            rBody.MovePosition(pos);
+        }
+    }
+        
+    
 }
