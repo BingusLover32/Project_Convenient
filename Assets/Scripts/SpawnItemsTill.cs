@@ -11,11 +11,8 @@ public class SpawnItemsTill : MonoBehaviour
     public void ItemSpawn()
     {
         StartCoroutine(SpawnItems());
-    }    
-    void Start()
-    {
-        
     }
+ 
 
     public IEnumerator SpawnItems()
     {
@@ -26,7 +23,7 @@ public class SpawnItemsTill : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
 
-        
+      
     }
 
 

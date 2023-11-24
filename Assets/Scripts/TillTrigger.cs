@@ -32,13 +32,15 @@ public class TillTrigger : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (numberofpeople == 2)
         {
+
             spawnItemsTill.ItemSpawn();
-            numberofpeople = 0;
             moveCamera.tillactivated = true;
+            numberofpeople = 0;
+            
         }
        
 
@@ -47,7 +49,7 @@ public class TillTrigger : MonoBehaviour
     {
         if (other.tag == "Customer")
         {
-            moveCamera.tillactivated = false;
+            
         }
 
         if (other.tag == "Player")
